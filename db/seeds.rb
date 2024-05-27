@@ -7,3 +7,9 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+puts 'Creating 2 users and a prop...'
+# batman = User.create!(username: "test1", email: "test1@test.com", password: '123456' )
+# barbie = User.create!(username: "test2", email: "test2@test.com",  password: "123456")
+# batmobile = Prop.create!(name: "batmobile", user_id: 1)
+puts 'Done!'
