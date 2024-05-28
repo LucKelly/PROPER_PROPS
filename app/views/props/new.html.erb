@@ -1,0 +1,17 @@
+<div>
+  <h1>New Prop</h1>
+  <div class="mt-3">
+    <%= simple_form_for @prop do |f| %>
+      <%= f.input :name %>
+      <%= f.input :price %>
+      <%= f.input :description %>
+      <%= f.input :category %>
+
+      <div class="form-actions">
+        <%= link_to "Cancel", root_path, class: "btn btn-outline-secondary btn-lg me-2" %>
+        <%= f.submit class: "btn btn-primary btn-lg" %>
+      </div>
+    <% end %>
+  </div>
+  <%# copy in the form from lists project and check with teacher  %>
+</div>
