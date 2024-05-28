@@ -14,7 +14,11 @@ class PropsController < ApplicationController
   def index
     @props = Prop.all
   end
-    
+
+  def show
+    @prop = Prop.find(params[:id])
+  end
+
   def new
     @prop = Prop.new
   end
@@ -23,8 +27,7 @@ class PropsController < ApplicationController
     @prop = Prop.new(prop_params)
     @prop.user = current_user
     if @prop.save
-    # change line 11 to the prop show path once it has been created!
-      redirect_to root_path
+      redirect_to prop_path(@prop)
     else
       render :new, status: :unprocessable_entity
     end
