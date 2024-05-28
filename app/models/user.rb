@@ -5,4 +5,6 @@ class User < ApplicationRecord
   has_many :props, through: :bookings
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  validates :username, presence: true
 end
