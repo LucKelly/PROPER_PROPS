@@ -23,6 +23,6 @@ puts 'Creating 10 movie props'
 @prop7 = Prop.create!(name: "Pulp Fiction Briefcase", user: @kinophile)
 @prop8 = Prop.create!(name: "Fight Club Soap", user: @jester_john)
 @prop9 = Prop.create!(name: "Paterson's Notebook", user: @jjwahl)
-@prop10 = Prop.create!(name: "Tarkowsky's Mirror", user: @kinophile)
+@prop10 = Prop.create!(name: "Tarkowsky's Weird Floor", user: @kinophile)
 
 puts 'Done!'

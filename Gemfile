@@ -11,6 +11,9 @@ gem "sprockets-rails"
 # Use Devise for user authentication
 gem "devise"
 
+# Use Cloudinary for image upload
+gem "cloudinary"
+
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 
