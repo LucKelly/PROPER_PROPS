@@ -2,6 +2,7 @@ class Prop < ApplicationRecord
   belongs_to :user
   has_many :users, through: :bookings
   validates :name, uniqueness: true
-  validates :description, :price, presence: true
+  validates :name, :description, presence: true
+  validates :price, numericality: { only_integer: true }
   validates :category, inclusion: { in: %w[vehicles accessories weapons clothing other]}
 end
