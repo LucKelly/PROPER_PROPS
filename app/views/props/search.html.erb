@@ -5,7 +5,7 @@
   <p><%= prop.price %>€</p>
   <p> Category: <%= prop.category %></p>
   <p> <%= prop.description %></p>
+  <p>  <%= cl_image_tag prop.photo.key, height: 300, width: 400, crop: :fill %> </p>
 </div>
 
 <% end %>
-
