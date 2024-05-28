@@ -1,0 +1,24 @@
+<h1>Welcome to PropperProps</h1>
+<div>
+<%= form_with(url: search_props_path, method: :get, local: true) do %>
+  <%= label_tag :query, "Search for:" %>
+  <%= text_field_tag :query, params[:query] %>
+  <%= submit_tag "Search", name: nil %>
+<% end %>
+
+<%= link_to "View All Props", props_path %>
+
+<%= link_to "Add a New Prop", new_prop_path %>
+</div>
+<div>
+<h2>Recently listed Props</h2>
+  <% @props.order(created_at: :desc).limit(5).each do |prop| %>
+    <div>
+      <h3><%= prop.name %></h3>
+      <p>Owner: <%= prop.user.username %></p>
+      <p><%= prop.price %>€</p>
+      <p>Category: <%= prop.category %></p>
+      <p><%= prop.description %></p>
+    </div>
+  <% end %>
+</div>
