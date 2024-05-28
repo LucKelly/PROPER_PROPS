@@ -1,0 +1,22 @@
+<% @props.each do |prop| %>
+<div>
+  <h3><%= prop.name %></h3>
+  <p>Owner: <%= prop.user.username %></p>
+  <p><%= prop.price %>€</p>
+  <p> Category: <%= prop.category %></p>
+  <p> <%= prop.description %></p>
+</div>
+
+<% end %>
+<div>
+<h2>Recently listed Props</h2>
+  <% @props.order(created_at: :desc).limit(5).each do |prop| %>
+    <div>
+      <h3><%= prop.name %></h3>
+      <p>Owner: <%= prop.user.username %></p>
+      <p><%= prop.price %>€</p>
+      <p>Category: <%= prop.category %></p>
+      <p><%= prop.description %></p>
+    </div>
+  <% end %>
+</div>

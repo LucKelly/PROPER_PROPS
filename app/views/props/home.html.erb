@@ -1,0 +1,12 @@
+<h1>Welcome to PropperProps</h1>
+<div>
+<%= form_with(url: search_props_path, method: :get, local: true) do %>
+  <%= label_tag :query, "Search for:" %>
+  <%= text_field_tag :query, params[:query] %>
+  <%= submit_tag "Search", name: nil %>
+<% end %>
+
+<%= link_to "View All Props", props_path %>
+
+<%= link_to "Add a New Prop", new_prop_path %>
+</div>

@@ -8,8 +8,15 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-puts 'Creating 2 users and a prop...'
-# batman = User.create!(username: "test1", email: "test1@test.com", password: '123456' )
-# barbie = User.create!(username: "test2", email: "test2@test.com",  password: "123456")
-# batmobile = Prop.create!(name: "batmobile", user_id: 1)
+
+# Destroy all existing records to start from a clean state
+Prop.destroy_all
+User.destroy_all
+
+# Create a new user
+@batman = User.create!(username: "test1", email: "test1@test.com", password: '123456')
+
+# Create a new prop
+@batmobile = Prop.create!(name: "batmobile", user: @batman)
+
 puts 'Done!'
