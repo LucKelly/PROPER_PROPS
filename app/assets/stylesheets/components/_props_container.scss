@@ -1,0 +1,26 @@
+.all-props{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.prop-card {
+  margin: 20px;
+  font-family: 'Courier New';
+  display: flex;
+  border: 1px solid;
+  color:black;
+  border-radius: 0;
+  height: 200px;
+}
+
+.props-container{
+  box-shadow:2px ;
+  box-sizing:content-box ;
+  border: 1px solid blue;
+  border-right:2px dotted black;
+  border-bottom: 2px dashed green($color: #000000);
+  border-left: 2px dotted black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items:start ;
+}

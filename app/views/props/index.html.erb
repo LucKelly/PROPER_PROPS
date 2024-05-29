@@ -1,16 +1,20 @@
 <h1>LIST OF PROPS </h1>
-<div class="container text-center">
-<% @props.each do |prop| %>
-  <div class="prop-container">
-    <div index="description">
-      <p><%= cl_image_tag prop.photo.key, height: 75, width: 100, crop: :fill %></p>
-      <p> <%= prop.description %></p>
+<div class="container text-center props-container">
+  <% @props.each do |prop| %>
+    <div class="prop-card">
+      <div index="description">
+        <p>
+        <%= link_to prop_path(prop) do %>
+        <%=cl_image_tag prop.photo.key, height: 75, width: 100, crop: :fill %>
+        <% end %>
+        <p> <%= prop.description %></p>
+      </div>
+
+      <div>
+        <p><%= prop.name %></p>
+        <p><%= prop.price %></p>
+        <p><%= prop.category %></p>
+      </div>
     </div>
-    <div>
-      <p><%= prop.name %></p>
-      <p><%= prop.price %></p>
-      <p><%= prop.category %></p>
-    </div>
-  </div>
-<% end %>
+  <% end %>
 </div>
