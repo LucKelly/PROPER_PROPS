@@ -3,7 +3,11 @@
     <h1><%= @prop.name %></h1>
   </div>
   <div class="d-flex justify-content-center">
-    <p>  <%= cl_image_tag @prop.photo.key, height: 300, width: 400, crop: :fill %> </p>
+    <% if @prop.photo.attached? %>
+      <p>  <%= cl_image_tag @prop.photo.key, height: 300, width: 400, crop: :fill %> </p>
+    <% else %>
+      <i class="fa-solid fa-broom fa-5x fa-border"></i>
+    <% end %>
   </div>
 
   <div class="d-flex justify-content-center">
