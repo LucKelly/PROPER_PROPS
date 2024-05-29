@@ -16,10 +16,6 @@
 .props-container{
   box-shadow:2px ;
   box-sizing:content-box ;
-  border: 1px solid blue;
-  border-right:2px dotted black;
-  border-bottom: 2px dashed green($color: #000000);
-  border-left: 2px dotted black;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items:start ;

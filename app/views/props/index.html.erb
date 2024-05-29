@@ -1,19 +1,20 @@
-<h1>LIST OF PROPS </h1>
+<h1 class="headers">LIST OF PROPS </h1>
 <div class="container text-center props-container">
+
   <% @props.each do |prop| %>
-    <div class="prop-card">
+    <div class="card-body headers rounded m-4">
       <div index="description">
         <p>
         <%= link_to prop_path(prop) do %>
-        <%=cl_image_tag prop.photo.key, height: 75, width: 100, crop: :fill %>
+        <%=cl_image_tag prop.photo.key, height: 75, width: 100, crop: :fill, class: "rounded-circle" %>
         <% end %>
         <p> <%= prop.description %></p>
       </div>
 
       <div>
-        <p><%= prop.name %></p>
-        <p><%= prop.price %></p>
-        <p><%= prop.category %></p>
+        <p class="body"><%= prop.name %></p>
+        <p class="body"><%= prop.price %></p>
+        <p class="body"><%= prop.category %></p>
       </div>
     </div>
   <% end %>
