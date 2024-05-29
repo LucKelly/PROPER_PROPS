@@ -10,3 +10,46 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+/* Custom styles */
+.fixed-size {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.stretched-link {
+  position: relative;
+  z-index: 1;
+}
+
+.stretched-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+/* app/assets/stylesheets/application.scss */
+
+.carousel-control {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: orange;
+    border: none;
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+  background-color: darkorange;
+  border-color: darkorange;
+}
