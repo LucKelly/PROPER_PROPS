@@ -1,23 +1,23 @@
 <div>
   <div class="d-flex justify-content-center">
-    <h1><%= @prop.name %></h1>
+    <h1 class="headers"><%= @prop.name %></h1>
   </div>
   <div class="d-flex justify-content-center">
     <% if @prop.photo.attached? %>
-      <p>  <%= cl_image_tag @prop.photo.key, height: 300, width: 400, crop: :fill %> </p>
+      <%= cl_image_tag @prop.photo.key, height: 300, width: 400, crop: :fill, class: "show-card" %>
     <% else %>
       <i class="fa-solid fa-broom fa-5x fa-border"></i>
     <% end %>
   </div>
 
   <div class="d-flex justify-content-center">
-    <div class="card text-center" style="width: 18rem;">
+    <div class="card text-center m-5" style="width: 18rem;">
       <div class="card-body">
-        <h5 class="card-title">Category</h5>
+        <h5 class="headers card-title">Category</h5>
         <p class="card-text"> <%= @prop.category %> </p>
-        <h5 class="card-text"> Description</h5>
+        <h5 class="headers card-text"> Description</h5>
         <p class="card-text"> <%= @prop.description %></p>
-        <button href="#" class="btn btn-success"> <%= link_to "Book now!", root_path %> </button>
+        <button href="#" class="my-button"> <%= link_to "Book now!", root_path %> </button>
       </div>
     </div>
   </div>

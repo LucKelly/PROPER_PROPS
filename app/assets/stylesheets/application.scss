@@ -21,6 +21,7 @@
 
 .card-body {
   padding: 10px;
+  background-color: $darkest;
 }
 
 .stretched-link {
@@ -52,4 +53,13 @@
 .carousel-control:focus {
   background-color: darkorange;
   border-color: darkorange;
+}
+
+p {
+  color: $lightest;
+}
+
+a {
+  color: $middle;
+  font-weight: 800;
 }

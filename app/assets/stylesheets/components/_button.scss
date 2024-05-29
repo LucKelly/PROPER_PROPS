@@ -1,0 +1,29 @@
+.my-button {
+  position: relative;
+  background-color: whitesmoke;
+  border: solid;
+  border-color: red;
+  border-radius: 5px;
+  font-style: bolder;
+  font-size: 16px;
+  color: $darkest;
+  padding: 5px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.my-button:hover {
+  background-color: black;
+  transition: 1s
+}
+
+.my-button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}

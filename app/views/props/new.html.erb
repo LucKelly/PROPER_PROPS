@@ -1,6 +1,6 @@
 <div>
-  <h1>New Prop</h1>
-  <div class="mt-3">
+  <h1 class="headers">New Prop</h1>
+  <div class="col-md-6 offset-md-3">
     <%= simple_form_for @prop do |f| %>
       <%= f.input :name %>
       <%= f.input :price %>
@@ -9,7 +9,7 @@
 
       <div class="form-actions">
         <%= link_to "Cancel", root_path, class: "btn btn-outline-secondary btn-lg me-2" %>
-        <%= f.submit class: "btn btn-primary btn-lg" %>
+        <%= f.submit class: "my-button" %>
       </div>
     <% end %>
   </div>
