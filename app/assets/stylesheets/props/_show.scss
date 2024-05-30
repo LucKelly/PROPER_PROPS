@@ -1,0 +1,44 @@
+.heading-container {
+  display: flex;
+  margin-bottom: 35px;
+  justify-content: center;
+}
+
+.big-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.top-show-container {
+  display: flex;
+}
+
+.left-show-container {
+  display: flex;
+  margin-right: 200px;
+  width: 700px;
+  height: 500px;
+}
+
+.right-show-container {
+  display: flex;
+}
+
+.card-body{
+  width: 350px;
+  height: 500px;
+  padding: 0px;
+  border-radius: 4px;
+  box-shadow: 10px 10px 30px rgba(0,0,0,.1);
+  text-align: center;
+}
+.bottom-show-container {
+  display: flex;
+  text-align: center;
+}
+
+h1{
+  text-align: center;
+}
