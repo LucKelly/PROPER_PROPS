@@ -1,0 +1,8 @@
+<% @props.each do |prop| %>
+  <div class="card-body">
+    <h3><%= prop.name %></h3>
+    <p><%= prop.description %></p>
+    <%= link_to "Details", prop_path(prop) %>
+  </div>
+  </div>
+<% end %>

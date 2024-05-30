@@ -1,14 +1,17 @@
-<h1 class="headers">LIST OF PROPS </h1>
-<div class="container text-center props-container">
+<div class="d-flex text-center items-center justify-content-center">
+  <h1 class="headers my-4">LIST OF PROPS </h1>
+</div>
 
+<div class="container text-center props-container">
   <% @props.each do |prop| %>
+
     <div class="card-body headers rounded m-4">
       <div index="description">
         <p>
         <%# if there's an image, add the link to the image  %>
         <% if prop.photo.attached? %>
           <%= link_to prop_path(prop) do %>
-          <%=cl_image_tag prop.photo.key, height: 75, width: 100, crop: :fill, class: "rounded-circle" %>
+          <%=cl_image_tag prop.photo.key, height: 180, width: 350, crop: :fill %>
           <% end %>
         <%# if not, add the link to the prop %>
         <% else %>
@@ -19,11 +22,12 @@
         <p> <%= prop.description %></p>
       </div>
 
-      <div>
-        <p class="body"><%= prop.name %></p>
-        <p class="body"><%= prop.price %></p>
-        <p class="body"><%= prop.category %></p>
+        <div>
+          <p class="body">Name: <%= prop.name %></p>
+          <p class="body">Price<%= prop.price %></p>
+          <p class="body">Category<%= prop.category %></p>
+        </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
 </div>
