@@ -28,8 +28,10 @@ body {
 }
 
 .card-body {
+  box-shadow: 1px 1px 15px red($color: #000000);
   padding: 10px;
   background-color: $darkest;
+  float: inline-start;
 }
 
 .stretched-link {

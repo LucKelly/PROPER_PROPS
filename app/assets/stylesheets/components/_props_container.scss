@@ -4,6 +4,8 @@
 }
 
 .prop-card {
+  box-sizing: content-box;
+  box-shadow: 10px 10px 15px;
   margin: 20px;
   font-family: 'Courier New';
   display: flex;
@@ -14,9 +16,8 @@
 }
 
 .props-container{
-  box-shadow:2px ;
-  box-sizing:content-box ;
+  box-sizing:content-box;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items:start ;
+  align-items:start;
 }
