@@ -24,6 +24,7 @@ class PropsController < ApplicationController
 
   def show
     @prop = Prop.find(params[:id])
+    @booking = Booking.new
   end
 
   def new

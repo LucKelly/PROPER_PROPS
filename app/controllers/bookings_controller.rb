@@ -12,10 +12,18 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.prop = Prop.find(params[:prop_id])
+    @prop = @booking.prop
+    raise
     if @booking.save
       redirect_to bookings_path
     else
-      render :new, status: :unprocessable_entity
+      render 'props/show', status: :unprocessable_entity
     end
+  end
+
+  private
+
+  def booking_params
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end
