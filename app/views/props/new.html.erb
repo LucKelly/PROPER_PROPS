@@ -1,5 +1,5 @@
 <div>
-  <h1 class="headers">New Prop</h1>
+  <h1>List Your Prop!</h1>
   <div class="col-md-6 offset-md-3">
     <%= simple_form_for @prop do |f| %>
       <%= f.input :name %>
@@ -10,8 +10,8 @@
 
 
       <div class="form-actions">
-        <%= link_to "Cancel", root_path, class: "btn btn-outline-secondary btn-lg me-2" %>
-        <%= f.submit class: "my-button" %>
+        <%= link_to "Cancel", root_path, class: "btn btn-light" %>
+        <%= f.submit class: "btn btn-outline-primary" %>
       </div>
     <% end %>
   </div>
