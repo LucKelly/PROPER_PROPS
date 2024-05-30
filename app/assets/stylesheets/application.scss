@@ -10,15 +10,20 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "props/index";
 
 
 
 /* Custom styles */
 
+b {
+  background-color: rgba(253, 240, 240, 0.863);
+}
 
-body {
-  background-color: #ffe3e0;
-
+.gradient {
+  background: #ED213A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .fixed-size {
@@ -36,7 +41,7 @@ body {
 
 .card-body {
   padding: 10px;
-  background-color: $darkest;
+  // background-color: $darkest;
 }
 
 .stretched-link {
@@ -58,17 +63,17 @@ body {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: orange;
+    background-color: $middle;
     border: none;
 }
 
 .carousel-control:hover,
 .carousel-control:focus {
-  background-color: darkorange;
-  border-color: darkorange;
+  background-color: $darkest;
+  border-color: $darkest;
 }
 p {
-  color: $lightest;
+  color: rgba(253, 240, 240, 0.863);
 }
 
 a {
