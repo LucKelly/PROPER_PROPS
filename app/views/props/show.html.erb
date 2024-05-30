@@ -23,3 +23,12 @@
   </div>
 
 </div>
+
+<div>
+  <%= link_to "Edit this prop", edit_prop_path(@prop) %>
+  <br>
+  <%= link_to "Back to all props", props_path %>
+  <br>
+  <%= button_to "Delete this prop", @prop, method: :delete, form: { data: { turbo_confirm: 'Are you sure?' } } %>
+
+</div>
