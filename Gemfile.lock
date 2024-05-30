@@ -140,6 +140,7 @@ GEM
     faraday-net_http (3.1.0)
       net-http
     ffi (1.16.3)
+    flatpickr (4.6.13.1)
     font-awesome-sass (6.5.2)
       sassc (~> 2.0)
     globalid (1.2.1)
@@ -322,6 +323,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   error_highlight (>= 0.4.0)
+  flatpickr
   font-awesome-sass (~> 6.1)
   importmap-rails
   jbuilder

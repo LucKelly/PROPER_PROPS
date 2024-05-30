@@ -11,6 +11,9 @@ gem "sprockets-rails"
 # Use Devise for user authentication
 gem "devise"
 
+# Use Flatpickr for date and time pickers
+gem 'flatpickr'
+
 # Use Cloudinary for image upload
 gem "cloudinary"
 
