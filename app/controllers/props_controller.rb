@@ -18,6 +18,10 @@ class PropsController < ApplicationController
     @props = Prop.all
   end
 
+  def my_index
+    @props = Prop.where(user: current_user)
+  end
+
   def show
     @prop = Prop.find(params[:id])
   end
