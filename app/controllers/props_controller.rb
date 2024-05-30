@@ -1,7 +1,10 @@
 class PropsController < ApplicationController
   def search
     if params[:query].present?
-      @props = Prop.where("name LIKE ?", "%#{params[:query].capitalize}%")
+      @props = Prop.where(
+        "name ILIKE :query OR description ILIKE :query OR category ILIKE :query",
+        query: "%#{params[:query]}%"
+      )
     else
       @props = Prop.all
     end
