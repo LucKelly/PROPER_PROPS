@@ -36,9 +36,25 @@ class PropsController < ApplicationController
     end
   end
 
+  def edit
+    @prop = Prop.find(params[:id])
+  end
+
+  def update
+    @prop = Prop.find(params[:id])
+    @prop.update(prop_params)
+    redirect_to prop_path(@prop), notice: "Your prop was successfully updated.", status: :see_other
+  end
+
+  def destroy
+    @prop = Prop.find(params[:id])
+    @prop.destroy
+    redirect_to props_path, notice: " Your prop was successfully deleted.", status: :see_other
+  end
+
   private
 
   def prop_params
-    params.require(:prop).permit(:name, :price, :description, :category)
+    params.require(:prop).permit(:name, :price, :description, :category, :photo)
   end
 end
