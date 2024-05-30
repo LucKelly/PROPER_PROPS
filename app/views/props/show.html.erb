@@ -21,9 +21,9 @@
     </div>
   </div>
   <div class="card m-4 p-2 col-5 mx-auto">
-    <%= simple_form_for [@prop, @booking], data: { controller: 'flatpickr' } do |f| %>
-<%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startDate" } }%>
-<%= f.input :end_date, as: :string, input_html: { data: { flatpickr_target: "endDate" }, id: 'end_date' } %>
+    <%= simple_form_for [@prop, @booking] do |f| %>
+    <%= f.input :start_date, html5: true, class: "date-form" %>
+    <%= f.input :end_date, html5: true %>
     <%= f.submit "Book now!" %>
     <% end %>
   </div>

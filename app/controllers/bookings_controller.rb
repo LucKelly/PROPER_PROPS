@@ -13,9 +13,8 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.prop = Prop.find(params[:prop_id])
     @prop = @booking.prop
-    raise
     if @booking.save
-      redirect_to bookings_path
+      redirect_to my_bookings_path
     else
       render 'props/show', status: :unprocessable_entity
     end
