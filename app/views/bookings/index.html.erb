@@ -1,0 +1,13 @@
+<h2>My Bookings</h2>
+<ul>
+<% if @bookings.empty? %>
+  <p>You have no bookings</p>
+ <% else %>
+  <% @bookings.each do |booking| %>
+    <li class="booking-card">
+      <p><%= link_to booking.prop.name, booking.prop %></p>
+      <p>From: <%= booking.start_date.strftime("%d/%m/%Y") %> - To:<%= booking.end_date.strftime("%d/%m/%Y") %></p>
+    </li>
+  <% end %>
+<% end %>
+</ul>
