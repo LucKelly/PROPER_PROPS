@@ -1,11 +1,11 @@
 <div class="d-flex text-center items-center justify-content-center">
-  <h1 class="headers my-4">LIST OF PROPS </h1>
+  <h1 class="my-4">LIST OF PROPS </h1>
 </div>
 
 <div class="container text-center props-container">
   <% @props.each do |prop| %>
 
-    <div class="card-body headers rounded m-4">
+    <div class="index-card-body headers rounded m-4">
       <div index="description">
         <p>
         <%# if there's an image, add the link to the image  %>
@@ -27,7 +27,6 @@
           <p class="body">Price<%= prop.price %></p>
           <p class="body">Category<%= prop.category %></p>
         </div>
-      </div>
-    <% end %>
+    </div>
   <% end %>
 </div>
