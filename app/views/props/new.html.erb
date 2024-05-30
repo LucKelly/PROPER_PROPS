@@ -6,6 +6,8 @@
       <%= f.input :price %>
       <%= f.input :description %>
       <%= f.input :category, collection: %w[vehicles accessories weapons clothing other] %>
+      <%= f.input :photo, as: :file %>
+
 
       <div class="form-actions">
         <%= link_to "Cancel", root_path, class: "btn btn-outline-secondary btn-lg me-2" %>
