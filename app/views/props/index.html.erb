@@ -5,8 +5,16 @@
     <div class="card-body headers rounded m-4">
       <div index="description">
         <p>
-        <%= link_to prop_path(prop) do %>
-        <%=cl_image_tag prop.photo.key, height: 75, width: 100, crop: :fill, class: "rounded-circle" %>
+        <%# if there's an image, add the link to the image  %>
+        <% if prop.photo.attached? %>
+          <%= link_to prop_path(prop) do %>
+          <%=cl_image_tag prop.photo.key, height: 75, width: 100, crop: :fill, class: "rounded-circle" %>
+          <% end %>
+        <%# if not, add the link to the prop %>
+        <% else %>
+          <%= link_to prop_path(prop) do %>
+          <i class="fa-solid fa-broom fa-5x fa-border"></i>
+          <% end %>
         <% end %>
         <p> <%= prop.description %></p>
       </div>

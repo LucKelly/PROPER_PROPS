@@ -39,6 +39,6 @@ class PropsController < ApplicationController
   private
 
   def prop_params
-    params.require(:prop).permit(:name, :price, :description, :category)
+    params.require(:prop).permit(:name, :price, :description, :category, :photo)
   end
 end
