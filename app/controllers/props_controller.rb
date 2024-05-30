@@ -18,8 +18,13 @@ class PropsController < ApplicationController
     @props = Prop.all
   end
 
+  def my_index
+    @props = Prop.where(user: current_user)
+  end
+
   def show
     @prop = Prop.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
@@ -55,6 +60,6 @@ class PropsController < ApplicationController
   private
 
   def prop_params
-    params.require(:prop).permit(:name, :price, :description, :category)
+    params.require(:prop).permit(:name, :price, :description, :category, :photo)
   end
 end
