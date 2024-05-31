@@ -5,6 +5,7 @@
 require 'open-uri'
 
 puts 'Destroying all existing records to start from a clean state'
+Booking.destroy_all
 Prop.destroy_all
 User.destroy_all
 
