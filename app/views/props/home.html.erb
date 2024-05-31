@@ -18,12 +18,6 @@
   </div>
 </div>
 
-<div class="row mb-4 text-center">
-  <div class="col">
-    <%= link_to "View All Props", props_path, class:"btn btn-outline-danger" %>
-    <%= link_to "Add a New Prop", new_prop_path, class: "btn btn-outline-danger" %>
-  </div>
-</div>
 
 <div class="container">
   <div class="row">
@@ -73,12 +67,19 @@
       <% end %>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="carousel-control-prev-icon carousel-prev-style" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="carousel-control-next-icon carousel-next-style" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
+  </div>
+</div>
+
+<div class="row mb-4 text-center">
+  <div class="col">
+    <%= link_to "View All Props", props_path, class:"btn btn-outline-danger" %>
+    <%= link_to "Add a New Prop", new_prop_path, class: "btn btn-outline-danger" %>
   </div>
 </div>
