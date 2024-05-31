@@ -14,14 +14,14 @@
       </div>
       <div class="righ-show-container">
         <div class="show-card-body show-card-spacing gradient">
-          <h1> About </h1>
+          <h2> About </h2>
           <br>
           <h5 class="headers card-title">Price</h5>
           <p class="card-text"> <%= @prop.price %>€ per day</p>
           <h5 class="headers card-title">Category</h5>
           <p class="card-text"> <%= @prop.category %> </p>
-          <h5 class="headers card-text"> Description</h5>
-          <p class="card-text"> <%= @prop.description %></p>
+
+
           <div class="card text-white bg-dark mb-3 p-2 col-10 mx-auto date-form">
             <%= simple_form_for [@prop, @booking] do |f| %>
             <%= f.input :start_date, html5: true, class: "start-date-form" %>
@@ -31,6 +31,11 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="show-description">
+      <h2>Description</h2>
+      <p class="card-text"> <%= @prop.description %></p>
     </div>
 
     <div class="bottom-show-container gap-5">
