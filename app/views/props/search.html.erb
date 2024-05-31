@@ -1,11 +1,22 @@
+<div class="container text-center props-container">
 <% @props.each do |prop| %>
-<div>
+<div class="card-body headers rounded m-4 gradient">
   <h3 class="headers"><%= prop.name %></h3>
+  <% if prop.photo.attached? %>
+          <%= link_to prop_path(prop) do %>
+          <p><%=cl_image_tag prop.photo.key, height: 180, width: 300, crop: :fill, class: "img-border" %></p>
+          <% end %>
+        <%# if not, add the link to the prop %>
+        <% else %>
+          <%= link_to prop_path(prop) do %>
+          <i class="fa-solid fa-broom fa-5x fa-border"></i>
+          <% end %>
+        <% end %>
   <p>Owner: <%= prop.user.username %></p>
   <p><%= prop.price %>€</p>
   <p> Category: <%= prop.category %></p>
   <p> <%= prop.description %></p>
-  <p>  <%= cl_image_tag prop.photo.key, height: 300, width: 400, crop: :fill %> </p>
 </div>
 
 <% end %>
+</div>
