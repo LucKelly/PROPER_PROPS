@@ -30,7 +30,7 @@
   z-index: 0;
 }
 
-.carousel-control {
+.-control {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -38,8 +38,8 @@
     border: #FFE3E0;
 }
 
-.carousel-control:hover,
-.carousel-control:focus {
+.-control:hover,
+.-control:focus {
   background-color: #EF6351;
   border-color: #EF6351;
 }

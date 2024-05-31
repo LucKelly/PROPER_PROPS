@@ -103,3 +103,30 @@ a {
   font-weight: 800;
   text-align: center;
 }
+
+.show-spacing {
+  width: 100%;
+  justify-content: space-around;
+}
+
+.show-margin {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.carousel-next-style {
+  background-color: black;
+  border-radius: 5px;
+  margin-left: 55px;
+}
+
+.carousel-prev-style {
+  background-color: black;
+  border-radius: 5px;
+  margin-right: 55px;
+}
+
+.show-card-spacing {
+  flex-direction: column;
+  justify-content: space-evenly;
+}

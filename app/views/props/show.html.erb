@@ -4,8 +4,8 @@
   </div>
 </div>
 
-    <div class="top-show-container">
-      <div class="left-show-container">
+    <div class="top-show-container show-spacing">
+      <div class="left-show-container show-margin">
         <% if @prop.photo.attached? %>
           <%= cl_image_tag @prop.photo.key, height: 500, width: 700, crop: :fill, class: "show-card" %>
         <% else %>
@@ -13,7 +13,7 @@
         <% end %>
       </div>
       <div class="righ-show-container">
-        <div class="show-card-body gradient">
+        <div class="show-card-body show-card-spacing gradient">
           <h1> About </h1>
           <br>
           <h5 class="headers card-title">Price</h5>
