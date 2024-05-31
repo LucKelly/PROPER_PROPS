@@ -1,30 +1,8 @@
 <div class="heading-container">
   <div class="d-flex justify-content-center mt-5">
-    <h1 class="headers text-center"><%= @prop.name %></h1>
+    <h1 class="text-center"><%= @prop.name %></h1>
   </div>
 </div>
-
-
-<div class="big-container">
-  <div class="d-flex flex-column justify-content-around h-100 align-items-center">
-    <div class="card text-center m-5" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="headers card-title">Category</h5>
-        <p class="card-text"> <%= @prop.category %> </p>
-        <h5 class="headers card-text"> Description</h5>
-        <p class="card-text"> <%= @prop.description %></p>
-      </div>
-    </div>
-  </div>
-  <div class="card m-4 p-2 col-5 mx-auto">
-    <%= simple_form_for [@prop, @booking] do |f| %>
-    <%= f.input :start_date, html5: true, class: "date-form" %>
-    <%= f.input :end_date, html5: true %>
-    <%= f.submit "Book now!" %>
-    <% end %>
-  </div>
-</div>
-
 
     <div class="top-show-container">
       <div class="left-show-container">
@@ -35,7 +13,7 @@
         <% end %>
       </div>
       <div class="righ-show-container">
-        <div class="card-body">
+        <div class="show-card-body gradient">
           <h1> About </h1>
           <br>
           <h5 class="headers card-title">Price</h5>
@@ -44,7 +22,15 @@
           <p class="card-text"> <%= @prop.category %> </p>
           <h5 class="headers card-text"> Description</h5>
           <p class="card-text"> <%= @prop.description %></p>
-          <button href="#" class="btn btn-success"> <%= link_to "Book now!", root_path %> </button>
+          <div class="card text-white bg-dark mb-3 p-2 col-10 mx-auto">
+            <%= simple_form_for [@prop, @booking] do |f| %>
+            <%= f.input :start_date, html5: true, class: "date-form" %>
+            <%= f.input :end_date, html5: true %>
+            <%= f.submit "Book now!", class: "btn btn-success" %>
+            <% end %>
+          </div>
+          <%# <button href="#" class="btn btn-success"> <%= link_to "Book now!", root_path %>
+          <%# </button> %>
         </div>
       </div>
     </div>
