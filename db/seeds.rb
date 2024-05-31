@@ -36,5 +36,14 @@ puts 'Creating 10 movie props'
 @prop9.photo.attach(io: URI.open('https://res.cloudinary.com/djbnwksnu/image/upload/v1716909245/owonjmkpqjvsskrysb6d.jpg'), filename: 'paterson.jpg')
 @prop10 = Prop.create!(name: "Tarkowsky's Weird Floor", price: 2, category: "other", description: "Rent Tarkowski's legendary floor in perfect condition. Authentic and powerful. Unleash its magic!", user: @kinophile)
 @prop10.photo.attach(io: URI.open('https://res.cloudinary.com/djbnwksnu/image/upload/v1716909245/yfaxxuitmkcr8ylmrvgh.jpg'), filename: 'tarkowsky.jpg')
-
+@prop11 = Prop.create!(name: "Genies Lamp", price: 40, category: "other", description: " Rent this iconic Genie's Lamp from Aladdin! Perfect for themed parties or displays, this detailed replica is sure to spark imaginations and bring a touch of magic to any event.", user: @weeb215)
+@prop11.photo.attach(io: URI.open('https://res.cloudinary.com/djbnwksnu/image/upload/v1717166815/pm7otpgyurgrlgf3y38m.jpg'), filename: 'genielamp.jpg')
+@prop12 = Prop.create!(name: "Magic Mirror", price: 600, category: "accessories", description: "Add a touch of enchantment with the Magic Mirror from Snow White and the Seven Dwarfs! This ornate, speaking mirror replica is ideal for themed decor or interactive experiences, captivating guests with its mystical charm.", user: @propper_gary )
+@prop12.photo.attach(io: URI.open('https://res.cloudinary.com/djbnwksnu/image/upload/v1717166815/jcb8pefdgdo5cx9ydlpe.jpg'), filename: 'MagicMirror.jpg')
+@prop13 = Prop.create!(name: "Cinderellas Glass Slipper", price: 100, category: "clothing", description: "Complete your fairy tale fantasy with Cinderella's Glass Slipper! This stunning, transparent shoe is a must-have for costume parties, weddings, or displays, ensuring a magical touch to any occasion.", user: @kinophile)
+@prop13.photo.attach(io: URI.open('https://res.cloudinary.com/djbnwksnu/image/upload/v1717166816/wkwehro1yrwn2xnm4ich.png'), filename: 'Cinderella-shoes.jpg')
+@prop14 = Prop.create!(name: "Mary Poppins' Umbrella", price: 50, category: "accessories", description: "Elevate your costume or event with Mary Poppins' iconic Umbrella! Featuring a parrot-head handle, this enchanting prop is perfect for fans of the beloved nanny and adds a whimsical flair to any gathering.", user: @jjwahl)
+@prop14.photo.attach(io: URI.open('https://res.cloudinary.com/djbnwksnu/image/upload/v1717166815/qjkwic7nv4zzf1fqdm4p.jpg'), filename: 'Marys-Umbrella.jpg')
+@prop15 = Prop.create!(name: "Elsa's Ice Dress", price: 30, category: "clothing", description: "Transform into the Snow Queen with Elsa's Ice Dress from Frozen! This shimmering, ice-blue gown is ideal for cosplay, parties, or special events, bringing the magic of Arendelle to life with every twirl.", user: @jester_john)
+@prop15.photo.attach(io: URI.open('https://res.cloudinary.com/djbnwksnu/image/upload/v1717166815/huif0anzm3mm2z5thnmd.jpg'), filename: 'cinderella-dress.jpg')
 puts 'Done!'
