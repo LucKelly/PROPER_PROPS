@@ -12,11 +12,9 @@
           <div class="first-div" >
             <%= form_with(url: search_props_path, method: :get, local: true, class: "form-inline justify-content-center") do %>
             <%= text_field_tag :query, params[:query], class: "form-control" %>
-          </div>
-          <div class="second-div">
             <%= submit_tag "Search", name: nil, class: "btn btn-outline-primary" %>
+          <% end %>
           </div>
-        <% end %>
       </div>
 
 
