@@ -1,13 +1,14 @@
-<h2>My Bookings</h2>
+<h2 class="title p-3 m-2">My Bookings</h2>
 <ul>
   <% if @bookings.empty? %>
     <p>You have no bookings</p>
   <% else %>
     <% @bookings.each do |booking| %>
-      <li class="booking-card">
-        <p><%= link_to booking.prop.name, booking.prop %></p>
-        <p>From: <%= booking.start_date.strftime("%d/%m/%Y") %> - To:<%= booking.end_date.strftime("%d/%m/%Y") %></p>
-      </li>
+      <div class="booking-card gradient col-4 mx-auto m-3 p-1">
+        <p class="p-2"><%= link_to booking.prop.name, booking.prop %></p>
+        <p class="p-2">Booked to user: <%= booking.user.username %></p>
+        <p class="p-2">From: <%= booking.start_date.strftime("%d/%m/%Y") %> - To: <%= booking.end_date.strftime("%d/%m/%Y") %></p>
+      </div>
     <% end %>
   <% end %>
 </ul>
