@@ -7,7 +7,8 @@
       <li class="booking-card">
         <p><%= link_to booking.prop.name, booking.prop %></p>
         <p>From: <%= booking.start_date.strftime("%d/%m/%Y") %> - To:<%= booking.end_date.strftime("%d/%m/%Y") %></p>
-      </li>
+          <p>Total price: <%= booking.prop.price * (booking.end_date - booking.start_date).to_i %>€</p>
+        </li>
     <% end %>
   <% end %>
 </ul>
