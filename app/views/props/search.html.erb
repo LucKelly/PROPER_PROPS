@@ -1,11 +1,13 @@
+<div class="container text-center props-container">
 <% @props.each do |prop| %>
-<div>
+<div class="card-body headers rounded m-4 gradient">
   <h3 class="headers"><%= prop.name %></h3>
+  <p><%= cl_image_tag prop.photo.key, height: 300, width: 400, crop: :fill, class: "img-border" %></p>
   <p>Owner: <%= prop.user.username %></p>
   <p><%= prop.price %>€</p>
   <p> Category: <%= prop.category %></p>
   <p> <%= prop.description %></p>
-  <p>  <%= cl_image_tag prop.photo.key, height: 300, width: 400, crop: :fill %> </p>
 </div>
 
 <% end %>
+</div>
